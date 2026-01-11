@@ -49,10 +49,10 @@ TIMEZONE_OFFSET=8
 
 ```bash
 # 使用所有默认参数创建
-node scripts/create-apikey-delivery.js
+docker exec claude-relay-service-claude-relay-1 node scripts/create-apikey-delivery.js
 
 # 或通过 npm 脚本运行（需要先在 package.json 添加）
-npm run create:apikey
+docker exec claude-relay-service-claude-relay-1 npm run create:apikey
 ```
 
 ### 命令行参数
@@ -71,20 +71,20 @@ npm run create:apikey
 
 ```bash
 # 示例 1: 使用默认参数
-node scripts/create-apikey-delivery.js
+docker exec claude-relay-service-claude-relay-1 node scripts/create-apikey-delivery.js
 
 # 示例 2: 自定义名称和金额
-node scripts/create-apikey-delivery.js --name "测试账户_001" --totalCostLimit 50
+docker exec claude-relay-service-claude-relay-1 node scripts/create-apikey-delivery.js --name "测试账户_001" --totalCostLimit 50
 
 # 示例 3: 指定完整参数
-node scripts/create-apikey-delivery.js \
+docker exec claude-relay-service-claude-relay-1 node scripts/create-apikey-delivery.js \
   --name "VIP客户_20260111" \
   --totalCostLimit 100 \
   --expirationDays 30 \
   --description "VIP客户专属账户"
 
 # 示例 4: 指定输出路径
-node scripts/create-apikey-delivery.js --output /tmp/delivery.md
+docker exec claude-relay-service-claude-relay-1 node scripts/create-apikey-delivery.js --output /tmp/delivery.md
 ```
 
 ## 实现细节
