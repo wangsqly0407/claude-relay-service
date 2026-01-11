@@ -64,4 +64,4 @@ Hi，您的订单已发货！
 
 例如：
 - `http://104.62.94.44:3000/admin-next/stats`
-- `http://www.claudecodeserver.top/admin-next/stats`
+- `http://www.aiclaude.top/admin-next/stats`
